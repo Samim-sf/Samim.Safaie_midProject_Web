@@ -5,11 +5,105 @@
     color: black !important;
 }
 header li{
-    min-width: 5rem;
+    /*min-width: 5rem;*/
 }
 .container-fluid {
     padding-right: 15px !important;
     padding-left: 15px !important;
     margin-right: auto !important;
     margin-left: auto !important;
+}
+.edited-text{
+    width:250px;
+    background-color:#20c997;
+    height:200px;
+}
+.test{
+    background-color:red;
+    min-width: 100%;
+}
+main{
+    background-color:blue;
+}
+.editable-text{
+    margin:7rem;
+    /*background-color:black;*/
+    width:70%;
+    font-size: 30px;
+}
+.image-contains img{
+    width:10%;
+    margin:5px
+}
+
+
+@media only screen and (max-width: 575px) {
+    /*.test img{*/
+    /*  max-width:80%;*/
+    /*}*/
+}
+
+@media only screen and (min-width: 576px )and (max-width: 992px) {
+    /*.test img{*/
+    /*    max-width:80%;*/
+    /*}*/
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    #outerHeaderDiv {
+        min-height: 11vh;
+        font-size: 22px;
+    }
+
+    #upper-menu-header {
+        font-size: 20px;
+    }
+
+    .soccer-table, #news {
+        max-width: inherit;
+    }
+
+
+}
+
+@media only screen and  (max-width: 1200px) {
+    @keyframes hideLogin {
+        0% {
+            background-color: #fff;
+            transform: translate(30%, -20px) scaleY(1);
+
+        }
+        50% {
+            transform: translate(0, 0) scaleY(0.8);
+        }
+        100% {
+            background-color: #d7e7f1;
+            transform: translate(25%, 10px) scaleY(0.3);
+        }
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    #outerHeaderDiv {
+        font-size: 28px;
+        min-height: 13vh;
+    }
+
+    .slideshow, #news {
+        max-width: 75%;
+    }
+
+    .form {
+        max-width: 500px !important;
+        min-width: 500px !important;
+        min-height: 35rem !important;
+    }
+
+    .form-wrapper.is-active .switcher-login {
+        transform: translateX(4rem);
+    }
+
+    .form-wrapper.is-active .switcher-signup {
+        transform: translateX(-14rem);
+    }
 }
