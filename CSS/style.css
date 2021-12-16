@@ -122,6 +122,11 @@ img:hover {
     cursor: pointer;
 }
 
+.right-items-contact  input,.right-items-contact  textarea {
+    background-color: rgba(159, 159, 159, 0.17);
+}
+
+
 
 @media only screen and (max-width: 575px) {
     /*.test img{*/
