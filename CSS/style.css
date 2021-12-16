@@ -1,3 +1,7 @@
+::selection{
+    background-color: black;
+    color: white !important;
+}
 .selected-item-menu {
     background-color: white;
 }
@@ -12,8 +16,8 @@ header li {
 }
 
 
-header li :hover,.selected-item-menu > a:hover{
-    font-size:20px;
+header li :hover, .selected-item-menu > a:hover {
+    font-size: 20px;
 }
 
 .container-fluid {
@@ -68,48 +72,55 @@ img:hover {
 .extra-info h6 {
     opacity: 0.7;
 }
+
 .extra-info span {
     opacity: 0.3;
 }
 
-.extra-info ul li a{
-    font-size:10px;
+.extra-info ul li a {
+    font-size: 10px;
     text-decoration: none;
-    padding:0 1rem;
+    padding: 0 1rem;
     opacity: 0.5;
 }
+
 .extra-info ul li:not(:last-child) {
     border-right: 1px solid rgba(138, 138, 138, 0.44);
 }
 
 
 /*---------------------------------------*/
-.about-page-header{
-    font-size:3rem;
+.about-page-header {
+    font-size: 3rem;
 }
 
 /*ul {*/
 /*    list-style-type: none;*/
 /*}*/
-.titles-aboutPage  p,.titles-aboutPage  ul{
-    opacity:0.5;
+.titles-aboutPage p, .titles-aboutPage ul {
+    opacity: 0.5;
 }
 
+/*---------------------------------------*/
+.card > div {
+    background-color: rgba(222, 222, 222, 0.29);
+}
 
+.card > img {
+}
+.card {
+    opacity: 0.6;
+    transition: transform 1s ease-in-out;
+}
 
+.card:hover {
+    transform: scale(1.05);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.card:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
 
 
 @media only screen and (max-width: 575px) {
