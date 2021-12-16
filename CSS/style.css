@@ -1,56 +1,88 @@
 .selected-item-menu {
     background-color: white;
 }
-.selected-item-menu >a{
+
+.selected-item-menu > a {
     color: black !important;
 }
-header li{
+
+header li {
     /*min-width: 5rem;*/
+    padding: 1rem;
 }
+
 .container-fluid {
     padding-right: 15px !important;
     padding-left: 15px !important;
     margin-right: auto !important;
     margin-left: auto !important;
 }
-.edited-text{
-    width:250px;
-    background-color:#20c997;
-    height:200px;
+
+.edited-text {
+    width: 250px;
+    background-color: #20c997;
+    height: 200px;
 }
-.test{
+
+.test {
     /*background-color:red;*/
     /*min-width: 100%;*/
 }
-main{
+
+main {
     /*background-color:blue;*/
 }
-.editable-text{
-    margin:7rem;
+
+.editable-text {
+    margin: 7rem;
     /*background-color:black;*/
-    width:70%;
+    width: 70%;
     font-size: 30px;
 }
-.image-contains img{
-    width:10%;
-    margin:5px
-}
-img:hover{
-    cursor:pointer;
+
+.image-contains img {
+    width: 10%;
+    margin: 5px
 }
 
-.star::before{
-    content:""
+img:hover {
+    cursor: pointer;
 }
+
+.star::before {
+    content: ""
+}
+
 .star::before,
 .star::after {
     display: inline-block;
     content: "";
     border-top: 2px solid black;
-    opacity:0.1;
+    opacity: 0.1;
     width: 4rem;
     margin: 0 1rem;
     transform: translateY(-0.25rem);
+}
+
+.btn {
+    height: 20%;
+}
+
+.extra-info h6 {
+    opacity: 0.7;
+}
+.extra-info span {
+    opacity: 0.3;
+}
+
+.extra-info ul li a{
+    font-size:10px;
+    text-decoration: none;
+    padding:0 1rem;
+    opacity: 0.5;
+}
+.extra-info ul li:not(:last-child) {
+    border-right: 1px solid rgba(138, 138, 138, 0.44);
 }
 
 @media only screen and (max-width: 575px) {
