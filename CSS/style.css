@@ -11,6 +11,11 @@ header li {
     padding: 1rem;
 }
 
+
+header li :hover,.selected-item-menu > a:hover{
+    font-size:20px;
+}
+
 .container-fluid {
     padding-right: 15px !important;
     padding-left: 15px !important;
@@ -24,14 +29,6 @@ header li {
     height: 200px;
 }
 
-.test {
-    /*background-color:red;*/
-    /*min-width: 100%;*/
-}
-
-main {
-    /*background-color:blue;*/
-}
 
 .editable-text {
     margin: 7rem;
@@ -84,6 +81,36 @@ img:hover {
 .extra-info ul li:not(:last-child) {
     border-right: 1px solid rgba(138, 138, 138, 0.44);
 }
+
+
+/*---------------------------------------*/
+.about-page-header{
+    font-size:3rem;
+}
+
+/*ul {*/
+/*    list-style-type: none;*/
+/*}*/
+.titles-aboutPage  p,.titles-aboutPage  ul{
+    opacity:0.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 575px) {
     /*.test img{*/
