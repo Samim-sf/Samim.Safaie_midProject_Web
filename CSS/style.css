@@ -1,7 +1,8 @@
-::selection{
+::selection {
     background-color: black;
     color: white !important;
 }
+
 .selected-item-menu {
     background-color: white;
 }
@@ -108,6 +109,7 @@ img:hover {
 
 .card > img {
 }
+
 .card {
     opacity: 0.6;
     transition: transform 1s ease-in-out;
@@ -122,11 +124,47 @@ img:hover {
     cursor: pointer;
 }
 
-.right-items-contact  input,.right-items-contact  textarea {
+.right-items-contact input, .right-items-contact textarea {
     background-color: rgba(159, 159, 159, 0.17);
 }
 
+.box {
 
+
+    /*background-color: black;*/
+    /*color: #fff;*/
+    padding: 20px;
+    position: relative;
+    margin: 40px;
+    /*float: left;*/
+}
+
+.box.arrow-top {
+    margin-top: 40px;
+}
+
+.box.arrow-top:after {
+    content: " ";
+    position: absolute;
+    left: 30px;
+    top: -15px;
+    border-top: none;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-bottom: 15px solid black;
+
+}
+
+
+.icon-box{
+    position: absolute;
+    left: 90px;
+    top: 0px;
+}
+
+.bi:hover{
+    cursor: pointer;
+}
 
 @media only screen and (max-width: 575px) {
     /*.test img{*/

@@ -5,6 +5,9 @@
     <title>Title</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="js/node_modules/jquery/dist/jquery.js"></script>
 
 </head>
 <body>
@@ -62,31 +65,89 @@
         <!--       Title-->
         <h1 class="about-page-header">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci
             alias doloribus esse excepturi fuga fugiat ipsa laborum molestias rerum!</h1>
-        <!--        Horizontal menu -->
-        <div>
-            <ul>
-                <li>
-                    <div class="card text-center border-0">
-                        <div class="card-header  bg-white">
-                            <ul class="nav nav-tabs card-header-tabs bg-white ">
-                                <li class="nav-item border-2">
-                                    <a class="nav-link active" href="#">Active</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card-body border-5">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional
-                                content.</p>
-                        </div>
-                    </div>
-                </li>
 
-            </ul>
-        </div>
+
+        <!--        Horizontal menu -->
 
     </div>
 
+
+    <!--    left and right arrow button-->
+    <div class="d-flex justify-content-end mt-5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+             class="bi bi-arrow-left-circle me-2"
+             viewBox="0 0 16 16"
+        >
+
+            <path fill-rule="evenodd"
+                  d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+             class="bi bi-arrow-right-circle"
+             viewBox="0 0 16 16"
+
+        >
+            <path fill-rule="evenodd"
+                  d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+        </svg>
+    </div>
+    <div class="container-fluid mt-5 " style="overflow-x:hidden">
+        <div class="row flex-row flex-nowrap horizontal-menu ze">
+            <div class="col-3 position-relative first-item-shown">
+                <i class="fas fa-user-lock icon-box"></i>
+                <div class="card card-block box arrow-top">
+                    <h5>lorem</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, porro.</p>
+                </div>
+            </div>
+
+            <div class="col-3 position-relative">
+                <i class="fas fa-heart icon-box"></i>
+                <div class="card card-block box arrow-top ">
+                    <h5>lorem</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, porro.</p>
+                </div>
+            </div>
+            <div class="col-3 position-relative">
+                <i class="fas fa-user-graduate icon-box"></i>
+                <div class="card card-block box arrow-top">
+                    <h5>lorem</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, porro.</p>
+
+                </div>
+            </div>
+            <div class="col-3 position-relative last-item-shown">
+                <i class="fas fa-paint-roller icon-box"></i>
+                <div class="card card-block box arrow-top ">
+                    <h5>lorem</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, porro.</p>
+
+                </div>
+            </div>
+            <div class="col-3 position-relative">
+                <i class="fas fa-wrench icon-box"></i>
+                <div class="card card-block box arrow-top">
+                    <h5>lorem</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, porro.</p>
+
+                </div>
+            </div>
+            <div class="col-3 position-relative">
+                <i class="fas fa-home icon-box"></i>
+                <div class="card card-block box arrow-top">
+                    <h5>lorem</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, porro.</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card card-block box arrow-top">Card</div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--    the fourth item-->
     <div class="container">
         <div class="row d-flex justify-content-center align-items-center titles-aboutPage">
             <div class="col-sm-12 col-md-6 mt-4">
@@ -245,6 +306,79 @@
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
     })
+    let firstItemShown = 0;
+    let lastItemShown = 4;
+    let leftArrow = document.querySelector('.bi-arrow-left-circle');
+    let rightArrow = document.querySelector('.bi-arrow-right-circle');
+
+    function leftMove() {
+
+        // let firstItemShown = document.querySelector('.horizontal-menu:nth-child(1)');
+        // if (firstItemShown.classList.contains('.first-item-shown')) {
+        //     //nothing
+        // } else {
+        //
+        // }
+        // if (firstItemShown == 1) {
+        //     //nothing
+        // } else {
+        //     $(document).ready(function () {
+        //         $(".col-3.position-relative.first-item-shown").fadeOut();
+        //     });
+        //     document.querySelector('.col-3.position-relative.first-item-shown').classList.remove('first-item-shown');
+        //     firstItemShown--;
+        //     document.querySelector('.horizontal-menu>div:nth-child(' + firstItemShown + ')').classList.add('first-item-shown');
+        //     $(document).ready(function () {
+        //         $(".col-3.position-relative.first-item-shown").fadeIn();
+        //     });
+        // }
+    }
+
+    function rightMove() {
+
+        // let firstItemShown = document.querySelector('.horizontal-menu:nth-child(1)');
+        // if (firstItemShown.classList.contains('.first-item-shown')) {
+        //     //nothing
+        // } else {
+        //
+        // }
+        if (lastItemShown == 6) {
+            //nothing
+        } else {
+
+            $(document).ready(function () {
+                $(".col-3.position-relative.first-item-shown").fadeOut();
+
+            });
+            document.querySelector('.col-3.position-relative.first-item-shown').classList.remove('first-item-shown');
+            firstItemShown++;
+            document.querySelector(".horizontal-menu>div:nth-child(" + firstItemShown + ")").classList.add('first-item-shown');
+            document.querySelector(".horizontal-menu>div:nth-child(" + lastItemShown + ")").classList.remove('last-item-shown');
+            lastItemShown++;
+            document.querySelector(".horizontal-menu>div:nth-child(" + lastItemShown + ")").classList.add('last-item-shown');
+            $(document).ready(function () {
+                $(".col-3.position-relative.last-item-shown").fadeIn();
+            });
+/*
+            console.log('last item show: ' + lastItemShown)
+            document.querySelector('.col-3.position-relative.last-item-shown').classList.remove('last-item-shown');
+            lastItemShown++;
+            // let last_child_of_body = document.querySelector('.ze>div:nth-child(2)');
+            let last_child_of_body = document.querySelector(".horizontal-menu>div:nth-child(" + lastItemShown + ")")
+            console.log('last item show: ' + lastItemShown)
+
+            document.querySelector(".horizontal-menu>div:nth-child(" + lastItemShown + ")").classList.add('last-item-shown');
+            console.log(last_child_of_body)
+            $(document).ready(function () {
+                $(".col-3.position-relative.last-item-shown").fadeIn();
+            });*/
+        }
+    }
+
+
+    leftArrow.addEventListener("click", leftMove);
+    rightArrow.addEventListener("click", rightMove);
+
 </script>
 
 </body>
