@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            padding:0;
+            margin:0;
+        }
+        .dont-move {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
+        .thing-that-moves {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: red;
+            top: 100px;
+            left: 0;
+            -webkit-transition: all .5s linear;
+            -moz-transition: all .5s linear;
+            -o-transition: all .5s linear;
+            transition: all .5s linear;
+        }
+        @media (min-width: 400px) {
+            .thing-that-moves {
+                left: 150px;
+                top: 0;
+                background-color: lightgray;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="dont-move">Doesnt move</div>
+<div class="thing-that-moves">moves</div>
+</body>
+</html>
